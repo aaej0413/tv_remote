@@ -123,12 +123,23 @@ public class LG_Tv extends Tv implements Remote {
         }else {
             System.out.println("전원이 꺼져있습니다.");
         }
-
-
+        if(volume > MAX_VOlUME) {
+            System.out.println("최대 음량은 50입니다.");
+            volume_down();
+        }
     }
 
     @Override
     public void volume_down() {
+        if(power==true) {
+            volume--;
+        }else {
+            System.out.println("전원이 꺼져있습니다.");
+        }
+        if(volume < MIN_VOlUME) {
+            System.out.println("음량이 0보다 작을 순 없습니다.");
+            volume_up();
+        }
 
     }
 
