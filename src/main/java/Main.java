@@ -28,11 +28,11 @@ public class Main {
         samsungtv.display();
         samsungtv.power_on();
         samsungtv.display();
-        samsungtv.channel_change(350);
+        samsungtv.channel_change(350); // 0
         samsungtv.channel_change(77);
-        samsungtv.channel_down();
-        samsungtv.channel_down();
-        samsungtv.channel_up();
+        samsungtv.channel_down();       // 76
+        samsungtv.channel_down();       // 75
+        samsungtv.channel_up();         // 76
         samsungtv.volume_up();
         samsungtv.display();
 
